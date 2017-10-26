@@ -1,0 +1,17 @@
+<h1>Add Member to the database</h1>
+<form ng-submit="addPlayer(ID, first, last, faculty, address, contact, nfname, nfinfo)">
+  <input class="default"type="text" ng-model='first' placeholder="First Name" required="true">
+  <input class="default" type="text" ng-model="last" placeholder="Last Name" required="true">
+  <input class="default" type="text" ng-model="ID" placeholder="IDno" required="true">
+  <input class="default"type="text" ng-model="faculty" placeholder="faculty" >
+  <input class="default"type="text" ng-model="address" placeholder="address" >
+  <input class="default"type="text" ng-model="contact" placeholder="contact">
+  <p>Custom field</p>
+  <div class="nfdiv">
+  <input class="nf" type="text" name="nfname" ng-model="nfname" placeholder="field name">
+  <input class="nf" type="text" name="nfinfo" ng-model="nfinfo" placeholder="field info">
+  </div>
+  <input type="submit" value="Add Player">
+
+
+</form>

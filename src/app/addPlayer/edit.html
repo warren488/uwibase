@@ -1,0 +1,23 @@
+<h1>Edit {{warren.first}}'s details</h1>
+<form ng-submit="edit(first, last, ID, faculty, address, contact)">
+  <p> Current first name: {{warren.first}}</p>
+  <input class="default"type="text" ng-model='first' placeholder="New First Name" >
+  <p> Current last name: {{warren.last}}</p>
+  <input class="default" type="text" ng-model="last" placeholder="New Last Name" >
+  <p> Current ID number: {{warren.ID}}</p>
+  <input class="default" type="text" ng-model="ID" placeholder="New IDno">
+  <p> Current faculty: {{warren.faculty}}</p>
+  <input class="default"type="text" ng-model="faculty" placeholder="New faculty" >
+  <p> Current address: {{warren.address}}</p>
+  <input class="default"type="text" ng-model="address" placeholder="New address" >
+  <p> Current contact: {{warren.contact}}</p>
+  <input class="default"type="text" ng-model="contact" placeholder="New contact">
+  <p>Add Custom field</p>
+  <div class="nfdiv">
+  <input class="nf" type="text" name="nfname" ng-model="nfname" placeholder="field name">
+  <input class="nf" type="text" name="nfinfo" ng-model="nfinfo" placeholder="field info">
+  </div>
+  <input type="submit" value="Submit changes">
+  <p>{{first}}</p>
+
+</form>

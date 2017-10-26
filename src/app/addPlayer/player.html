@@ -1,0 +1,10 @@
+<div id="player">
+<h3>Name: {{guy.first}} {{guy.last}}</h3>
+<h3>ID Number: {{guy.ID}}<h3>
+<h3>faculty: {{guy.faculty}}</h3>
+<h3>address: {{guy.address}}</h3>
+<h3>contact: {{guy.contact}}</h3>
+
+<h3 ng-repeat="custom in guycustom2"> {{custom[1]}}: {{custom[2]}}</h3>
+<a ng-if='guy.ID' id='edd' href="/edit"> edit </a>
+</div>

@@ -1,0 +1,25 @@
+<!-- <div style="float: right;">
+<p>Name: {{guy.first}} {{guy.last}}</p>
+<p>ID Number: {{guy.ID}}<p>
+<p>faculty: {{guy.faculty}}</p>
+<p>address: {{guy.address}}</p>
+<p>contact: {{guy.contact}}</p>
+<a href="/edit"> edit </a>
+</div> -->
+
+
+
+
+
+<input type="text" placeholder="Search.." id="myInput" ng-keyup="filterFunction()">
+
+<div class="" id="men">
+
+  <div class='card' name='men2'  ng-repeat="player in players" ng-click="setPlayer(player)">
+    <div class="container">
+
+    <h3 class="">{{player.first}} {{player.last}}</h3>
+    <p class=" description">{{player.ID}}</p>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<h1>Add new fixture</h1>
+<form ng-submit="addGame(tourn, fxaway, where, venue, transp, day1date, day1time)">
+  <label for="tourn">Tournament</label>
+  <input type="text" name="tourn" ng-model="tourn" placeholder="Tournament " required>
+  <label for="fxhome">Home Game</label>
+   <input type="radio"ng-model="where" name="where" value="Home" ng-init"venue = '3W's Oval'" ng-click="disable()" >
+   <label for="fxhome">Away Game</label>
+   <input type="radio" ng-model="where" name="where" value="Away" ng-click="enable()">
+   <br/>
+
+
+  <label for="fxaway">Opponents</label>
+  <input type="text" name="fxaway" ng-model="fxaway" placeholder="Opponents " required>
+  <label for="venue">Venue</label>
+  <input type="text" ng-model="venue" name="venue" placeholder="venue">
+
+  <label for="venue">Transportation</label>
+  <input type="text" ng-model="transp" name="transp"  placeholder="transportation">
+  <label for="venue">Day 1</label>
+  <input type="date" ng-model="day1date" class="daytime" name="day1date"  placeholder="start date">
+  
+  <input type="time" ng-model="day1time" class="daytime" name="day1time" value="">
+  <button type="button" name="button" ng-click="addDay()">Add day</button><br/>
+  <label for="squad" name="squadlabel" >Squad</label><br/>
+  <ol name="squadlist">
+
+  </ol>
+
+    <!-- *****************************************************************************************************
+    *****************************************************************************************************
+    *****************************************************************************************************
+***************************************************************************************************** -->
+
+<div class="dropdown">
+  <div ng-click="myFunction()" class="dropbtn">Add player +</div>
+
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" ng-keyup="filterFunction()">
+
+      <div class="scroll">
+
+      <a class="item" ng-click="add(player)" ng-repeat="player in players2" href="">{{player.first}} {{player.last}}</a>
+    </div>
+
+    </div>
+  </div>
+
+  <!-- *****************************************************************************************************
+  *****************************************************************************************************
+  *****************************************************************************************************
+  ***************************************************************************************************** -->
+
+  <input type="submit"  value="Add Game">
+
+
+</form>

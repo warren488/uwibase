@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<html lang="en-US" ng-app="uwiBase">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="./src/css/app.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign' rel='stylesheet'>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBD4TjGeZXKw7fWYR8X0UGfHAIvQqzUmF0",
+      authDomain: "myapp-4f894.firebaseapp.com",
+      databaseURL: "https://myapp-4f894.firebaseio.com",
+      storageBucket: "myapp-4f894.appspot.com",
+      messagingSenderId: "410181839308"
+    };
+    firebase.initializeApp(config);
+    </script>
+</head>
+
+
+<body>
+
+<!--
+  <nav>
+    <a href="/">home</a>
+    <a href="/edit">edit</a>
+    <a href="/view">view</a>
+    <a href="/addFx">Add Fixtures</a>
+  </nav> -->
+
+  <ul id="home">
+  <li class="main"><a class='menuitem' href="#home">Home</a></li>
+  <li class="dropdown1 main">
+    <a class ='menuitem' href="/view" class="dropbtn1">Players</a>
+    <div class="dropdown-content1">
+      <a class='pldrp' href="/">add a player</a>
+      <a class='pldrp' href="/view">view players</a>
+    </div>
+  </li>
+  <li class="main dropdown2"><a  class ='menuitem dropbtn2' href="viewfx">Fixtures</a>
+    <div class="dropdown-content2">
+      <a class="fxdrp" href="/addFx">add a fixture</a>
+      <a class="fxdrp" href="/viewfx">view Fixtures</a>
+
+    </div>
+  </li>
+
+  <li class="main dropdown3"><a  class ='menuitem dropbtn3' href="chat">Communication</a>
+    <div class="dropdown-content3">
+      <a class="comdrp" href="/chat">Chat</a>
+      <a class="comdrp" href="/post">Post to forum</a>
+
+    </div>
+  </li>
+
+</ul>
+
+<div ng-view></div>
+<!-- <add-player></add-player>
+<view-player></view-player>
+<view-players></view-players> -->
+
+</div>
+
+</body>
+<script src="./src/app/app.module.js"></script>
+<script src="./src/app/app.config.js"></script>
+<script src="./src/app/addPlayer/app1.module.js"></script>
+<script src="./src/app/addPlayer/app.component.js"></script>
+<script src="./src/app/addPlayer/factories.js"></script>
+
+
+
+</html>

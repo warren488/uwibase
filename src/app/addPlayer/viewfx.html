@@ -1,0 +1,8 @@
+<div  class="card" ng-repeat="game in games"  href='/fixtures/{{game.opponents}}:{{game.tournament}}'>
+    <div class="container">
+      {{game.opponents}}
+      <p class="subdued">
+        At: {{game.venue}}
+      </p>
+    </div>
+</div>

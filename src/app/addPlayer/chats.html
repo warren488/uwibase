@@ -1,0 +1,8 @@
+<div href='#/chat/{{person.ID}}' class="card" ng-repeat="person in people"> <!--href="#/tab/chats/{{chat.id}}"-->
+<div class="container">
+
+  <h2 ng-if="person.first">{{ person.first }} {{ person.last }}</h2>
+  <h2 ng-if="!person.first"> No first name </h2>
+  <p ng-if="Person.ID">{{person.ID}}</p>
+</div>
+</div>
